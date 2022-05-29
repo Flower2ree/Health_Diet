@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diet Page</title>
+    <link rel="stylesheet" href="{% static 'css\diet.css' %}" />
+</head>
+<body>
+    <h3><em>Hello, Guest! </em></h3>
+    <h2>Diet<a href="Main.html"><img class="side" src="{% static 'img\gohome.png' %}" width="50" height="50"></a></h2>
+    <div id="side_left">
+        <table> 
+            <tr class="1, C_title">
+                <th colspan="7">2022.04</td>
+            </tr>
+            <tr class="2, C_title">
+                <th style="color:red">Sun</th>
+                <th>Mon</th>
+                <th>Tue</th>
+                <th>Wed</th>
+                <th>Thr</th>
+                <th>Fri</th>
+                <th style="color:blue">Sat</th>
+            </tr>
+            <tr class="3">
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>1<div class="cal" id="1" value="1"></div></td>
+                <td style="color:blue">2<div class="cal" id="2" value="2"></div></td>
+            </tr>
+            <tr>
+                <td style="color:red">3<div class="cal" id="3" value="3"></div></td>
+                <td>4<div class="cal" id="4" value="4"></div></td>
+                <td>5<div class="cal" id="5" value="5"></div></td>
+                <td>6<div class="cal" id="6" value="6"></div></td>
+                <td>7<div class="cal" id="7" value="7"></div></td>
+                <td>8<div class="cal" id="8" value="8"></div></td>
+                <td style="color:blue">9<div class="cal" id="9" value="9"></div></td>
+            </tr>
+            <tr>
+                <td style="color:red">10<div class="cal" id="10" value="10"></div></td>
+                <td>11<div class="cal" id="11" value="11"></div></td>
+                <td>12<div class="cal" id="12" value="12"></div></td>
+                <td>13<div class="cal" id="13" value="13"></div></td>
+                <td>14<div class="cal" id="14" value="14"></div></td>
+                <td>15<div class="cal" id="15" value="15"></div></td>
+                <td style="color:blue">16<div class="cal" id="16" value="16"></div></td>
+            </tr>
+            <tr>
+                <td style="color:red">17<div class="cal" id="17" value="17"></div></td>
+                <td>18<div class="cal" id="18" value="18"></div></td>
+                <td>19<div class="cal" id="19" value="19"></div></td>
+                <td>20<div class="cal" id="20" value="20"></div></td>
+                <td>21<div class="cal" id="21" value="21"></div></td>
+                <td>22<div class="cal" id="22" value="22"></div></td>
+                <td style="color:blue">23<div class="cal" id="23" value="23"></div></td>
+            </tr>
+            <tr>
+                <td style="color:red">24<div class="cal" id="24" value="24"></div></td>
+                <td>25<div class="cal" id="25" value="25"></div></td>
+                <td>26<div class="cal" id="26" value="26"></div></td>
+                <td>27<div class="cal" id="27" value="27"></div></td>
+                <td>28<div class="cal" id="28" value="28"></div></td>
+                <td>29<div class="cal" id="29" value="29"></div></td>
+                <td style="color:blue">30<div class="cal" id="30" value="30"></div></td>
+            </tr>
+        </table>
+        <form id="calorie_form">
+            <div id="calender">
+                <p>Day:
+                    <select id="day">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                        <option value="13">13</option>
+                        <option value="14">14</option>
+                        <option value="15">15</option>
+                        <option value="16">16</option>
+                        <option value="17">17</option>
+                        <option value="18">18</option>
+                        <option value="19">19</option>
+                        <option value="20">20</option>
+                        <option value="21">21</option>
+                        <option value="22">22</option>
+                        <option value="23">23</option>
+                        <option value="24">24</option>
+                        <option value="25">25</option>
+                        <option value="26">26</option>
+                        <option value="27">27</option>
+                        <option value="28">28</option>
+                        <option value="29">29</option>
+                        <option value="30">30</option>
+                    </select>
+                </p>
+                <label for="calorie">Calorie:</label>
+                <input type="text" id="calorie" name="calorie"/>
+                <input class="btn" type="button" id="register" value="register" onclick="calfunc()" />
+            </div>
+        </form>
+    </div>
+    <div id="side_right">
+        <div class="menu">
+        <form>
+            <div class="left">
+                <div id="form">
+                    <span class="title">Gender</span>
+                    <input type="radio" name="gender" id="male" value="male" checked="checked" />
+                    <label for="male">male</label>
+                    <input type="radio" name="gender" id="female" value="female" />
+                    <label for="female">female</label>
+                </div>
+                <div id="form">
+                    <label for="height" class="title">Height:</label>
+                    <input type="text" id="height" name="height" />
+                </div>
+                <div id="form">
+                    <label for="weight" class="title">Weight:</label>
+                    <input type="text" id="weight" name="weight" />
+                </div>
+                <div id="form">
+                    <label for="age" class="title">Age:</label>
+                    <input type="text" id="age" name="age" />
+                    <input class="btn2" type="button" id="output" value="output" onclick="calfunc2()" />
+                </div>
+            </div>
+            <div class="right">
+                <div id="answer"><h1><em>Diet</em></h1></div>
+                <div id="answer2"><h1><em>For You!</em></h1></div>
+                <div id="BMI"></div>
+                <div id="yourweight"></div>
+            </div>
+        </div>
+        </form>
+        <h4>Calories in Food</h4>
+            <img src="{% static 'img\vegi.png'%}" class="right img" height="150" width="150">
+        <div id="food_calorie">
+            <ul>
+                <li><p>chicken breast(100g) 164kcal</p></li>
+                <li><p>rice(100g) 143kcal</p></li>
+                <li><p>hamburger(100g) 294kcal</p></li>
+                <li><p>ramyun(100g) 400kcal</p></li>
+            </ul>
+        </div>
+    </div>
+</body>
+<script src="{% static 'js\diet.js' %}"></script>
+</html>
